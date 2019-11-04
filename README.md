@@ -1,24 +1,41 @@
-# README
+# How to use
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Clone the repo `https://github.com/Iphytech/country-info.git` to your computer
 
-Things you may want to cover:
+change to the project directory
 
-* Ruby version
+NB: There is no database (because we ain't going to make use of it).
 
-* System dependencies
+go to the terminal and run `bundle or bundle install`
 
-* Configuration
+We are making use of `excon` for the restful api calls - Read more about it here (https://github.com/excon/excon)
+And we are consuming data from `Rapid APi endpoint`
 
-* Database creation
+For yuou to be able to use it, you have to signup on their website https://rapidapi.com/ and get the api key
 
-* Database initialization
+We are going to use `Figaro gem` to save our credentials -  See the documentation (https://github.com/laserlemon/figaro)
 
-* How to run the test suite
+To use it 
 
-* Services (job queues, cache servers, search engines, etc.)
+Got to the terminal and run `bundle exec figaro install`, This creates a commented config/application.yml file and adds it to your .gitignore. Add your own configuration to this file and you're done!
 
-* Deployment instructions
+Go inside the application.yml file and add your rapudapi key like this
 
-* ...
+```ruby
+api_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+
+Start the project and test what we have built
+```bash
+rails s or rails server
+```
+
+If you want to see the full response returned 
+
+Go to your controller in the search action  and add this
+
+```ruby
+ render :json =>  @country
+ 
+```

@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-lg-6">
+      <h4><%= @country['name'] %> information</h4>
+      <dl>
+        <dt>Country</dt>
+        <dd><%= @country['name'] %></dd>
+        <dt>Capital</dt>
+        <dd><%= @country['capital'] %></dd>
+        <dt>Currency</dt>
+        <dd><%= @country['currencies'].join(', ') %></dd>
+        <dt>Timezone(s)</dt>
+        <dd><%= @country['timezones'].join(', ') %></dd>
+        <dt>region</dt>
+        <dd><%= @country['region'] %></dd>
+         <dt>subregion</dt>
+        <dd><%= @country['subregion'] %></dd>
+        <dt>population</dt>
+        <dd><%= @country['population'] %></dd>
+        <dt>borders</dt>
+        <dd><%= @country['borders'].join(', ') %></dd>
+        <dt>languages</dt>
+        <dd><%= @country['languages'].join(', ') %></dd>
+        <dt>alpha2Code</dt>
+        <dd><%= @country['alpha2Code'] %></dd>
+      </dl>
+    </div>
+  </div>
+</div>

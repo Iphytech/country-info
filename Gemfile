@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 #custom
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
-gem 'excon', '~> 0.68.0'
+gem 'excon', '~> 0.71.0'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 
 # Use Capistrano for deployment
